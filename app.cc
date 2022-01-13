@@ -124,10 +124,6 @@ void verify(pair<string, vector<string>> item, vector<pair<string, vector<string
     printf("\033[1;33m%s\033[0m Roma spell is:", item.first.c_str());
     string answer;
     cin>>answer;
-//    char c;
-//    while((c=getchar()) !='\n'){
-//        answer += c;
-//    }
     if(answer.length() == 0){
         system("clear");
         verify(item, errorlist);
@@ -144,10 +140,10 @@ void verify(pair<string, vector<string>> item, vector<pair<string, vector<string
     if(not isright){
         printf("wrong answer \033[1;31m%s/%s\033[0m , correct one is \033[1;32m%s/%s\033[0m\n", item.first.c_str(),
                 answer.c_str(), item.first.c_str(), item.second[0].c_str());
-     //   printf("error ---------size:%d\n", item.second.size());
         error += 1;
-        cin.get();
         errorlist.push_back(item);
+        char c = cin.get();
+        c = cin.get();
     }
     finished += 1;
 }
